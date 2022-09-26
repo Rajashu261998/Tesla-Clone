@@ -1,10 +1,16 @@
 
 import './App.css';
+import Header from "./components/Header"
+import Home from './components/Home';
+import React from 'react'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Tesla</h1>
+      
+      <Header />
+      <Home />
     </div>
   );
 }
