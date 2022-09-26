@@ -1,28 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
+
 
 function Section({title,description,leftButtonText,rightButtonText,backgroundImage}) {
   // console.log(props)
   return (
     <Wrap bgImage={backgroundImage}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Fade bottom >
+          <ItemText>
+            <h1>{title}</h1>
+            <p>{description}</p>
+          </ItemText>
+      </Fade>
+      <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>
+              {leftButtonText}
+            </LeftButton>
 
-      <ButtonGroup>
-        <LeftButton>
-          {leftButtonText}
-        </LeftButton>
-
-        {/* if rightbutton exists then it will run */}
-        {rightButtonText && 
-          <RightButton>
-          {rightButtonText}
-          </RightButton>
-       
-        }
-        </ButtonGroup>
+            {/* if rightbutton exists then it will run */}
+            {rightButtonText && 
+              <RightButton>
+              {rightButtonText}
+              </RightButton>
+          
+            }
+            </ButtonGroup>
+        </Fade>
        
       
     </Wrap>
